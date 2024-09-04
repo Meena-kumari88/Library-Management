@@ -1,6 +1,30 @@
-const apiKey = "AIzaSyAYlD0MXFtLsMonDeYVgiy8EJjZmpBDo9A"; // Replace with your actual Google Books API key
+
+        const apiKey = "AIzaSyAYlD0MXFtLsMonDeYVgiy8EJjZmpBDo9A"; // Replace with your actual Google Books API key
         let startIndex = 0; // Initialize start index for pagination
         let currentCategory = ''; // Store the current category for fetching more books
+
+
+
+        //****************** For Genres*******************
+        function toggleGenresDropdown() {
+            const dropdown = document.getElementById('genresDropdown');
+            dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function toggleDropdown(dropdownId) {
+            const dropdowns = ['fictionGenres', 'nonFictionGenres', 'childrenGenres', 'otherGenres'];
+
+            dropdowns.forEach(id => {
+                const dropdown = document.getElementById(id);
+                if (id === dropdownId) {
+                    dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
+                } else {
+                    dropdown.style.display = 'none';
+                }
+            });
+        }
+
+
 
         // Function to search books
         function searchBooks() {
@@ -20,6 +44,8 @@ const apiKey = "AIzaSyAYlD0MXFtLsMonDeYVgiy8EJjZmpBDo9A"; // Replace with your a
 
         // Function to fetch books from Google Books API
         function fetchBooks(category, displayCategory) {
+            const genresDropdown = document.getElementById('genresDropdown');
+            genresDropdown.style.display = 'none';
             const customRightDiv = document.querySelector('.custom-right-div');
             customRightDiv.style.backgroundImage = 'none'; // Remove background image when books are loaded
             const customRightHeading = document.getElementById('custom-right-heading');
@@ -38,6 +64,7 @@ const apiKey = "AIzaSyAYlD0MXFtLsMonDeYVgiy8EJjZmpBDo9A"; // Replace with your a
                     toggleViewMoreButton(data.totalItems > startIndex + 9); // Show button if more books are available
                 })
                 .catch(error => console.error('Error fetching books:', error));
+
         }
 
         // Function to update books in the UI
@@ -51,7 +78,7 @@ const apiKey = "AIzaSyAYlD0MXFtLsMonDeYVgiy8EJjZmpBDo9A"; // Replace with your a
             }
 
             // Update heading to show the clicked category name
-            customRightHeading.textContent = `Books related to ${displayCategory}`;
+            customRightHeading.textContent = `${displayCategory} Books`;
 
             // Loop through the books and create new book cards
             books.forEach(book => {
@@ -125,5 +152,31 @@ const apiKey = "AIzaSyAYlD0MXFtLsMonDeYVgiy8EJjZmpBDo9A"; // Replace with your a
             // Toggle the selected dropdown
             dropdown.style.display = displayStyle === 'none' ? 'block' : 'none';
         }
+
+        // Retrieve the logged-in username from localStorage
+        const loggedInUser = localStorage.getItem("loggedInUser");
+
+        // Display the username in the designated element
+        if (loggedInUser) {
+            document.getElementById("username").textContent = loggedInUser;
+        } else {
+            // Redirect to login page if no user is logged in
+            window.location.href = "login.html";
+        }
+        document.addEventListener('click', function (event) {
+            const genresDropdown = document.getElementById('genresDropdown');
+            const genresButton = document.querySelector('.navbar-genres-button');
+
+            // Check if the click was outside the dropdown and the button
+            if (!genresDropdown.contains(event.target) && !genresButton.contains(event.target)) {
+                genresDropdown.style.display = 'none';
+            }
+        });
+
+        function toggleGenresDropdown() {
+            const dropdown = document.getElementById('genresDropdown');
+            dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
+        }
+
 
     
