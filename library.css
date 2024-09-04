@@ -371,7 +371,7 @@ footer {
     }
 
     .custom-right-div h2 {
-        margin-left: 5rem;
+        margin-left: 14rem;
         width: 30rem;
     }
 }
@@ -462,7 +462,17 @@ footer {
         margin-left: 30px;
         margin-top: 9rem;
     }
+   
+
 }
+@media(max-width: 820px){
+    .custom-right-div h2 {
+        margin-left: 3rem;
+        width: 30rem;
+    }
+}
+    
+
 
 /* Screen width 650px and below */
 @media (max-width: 650px) {
