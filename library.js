@@ -1,7 +1,7 @@
 
-        const apiKey = "AIzaSyAYlD0MXFtLsMonDeYVgiy8EJjZmpBDo9A"; // Replace with your actual Google Books API key
-        let startIndex = 0; // Initialize start index for pagination
-        let currentCategory = ''; // Store the current category for fetching more books
+        const apiKey = "AIzaSyAYlD0MXFtLsMonDeYVgiy8EJjZmpBDo9A"; 
+        let startIndex = 0; 
+        let currentCategory = ''; 
 
 
 
@@ -47,9 +47,9 @@
             const genresDropdown = document.getElementById('genresDropdown');
             genresDropdown.style.display = 'none';
             const customRightDiv = document.querySelector('.custom-right-div');
-            customRightDiv.style.backgroundImage = 'none'; // Remove background image when books are loaded
+            customRightDiv.style.backgroundImage = 'none'; 
             const customRightHeading = document.getElementById('custom-right-heading');
-            customRightHeading.textContent = `Loading books...`; // Optional loading text
+            customRightHeading.textContent = `Loading books...`; 
 
             // Store current category for loading more books
             currentCategory = category;
@@ -61,7 +61,7 @@
                 .then(response => response.json())
                 .then(data => {
                     updateBooks(data.items, displayCategory);
-                    toggleViewMoreButton(data.totalItems > startIndex + 9); // Show button if more books are available
+                    toggleViewMoreButton(data.totalItems > startIndex + 9); 
                 })
                 .catch(error => console.error('Error fetching books:', error));
 
@@ -131,7 +131,7 @@
 
         // Function to handle "View More" button click
         function viewMoreBooks() {
-            startIndex += 9; // Increment the start index to load more books
+            startIndex += 9; 
             fetchBooks(currentCategory, currentCategory + ' Books');
         }
 
@@ -160,7 +160,7 @@
         if (loggedInUser) {
             document.getElementById("username").textContent = loggedInUser;
         } else {
-            // Redirect to login page if no user is logged in
+           
             window.location.href = "login.html";
         }
         document.addEventListener('click', function (event) {
