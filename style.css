@@ -11,7 +11,7 @@
     background-size: cover;
     overflow-x: hidden;
     font-family: 'Arial', sans-serif;
-    font-size: 100%; /* Base font size (16px by default) */
+    font-size: 100%; 
   }
   
   /* Header Styles */
@@ -20,28 +20,28 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.25rem 3.125rem; /* 20px 50px */
+    padding: 1.25rem 3.125rem;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(10px);
     color: #fff;
   }
   
   .logo {
-    font-size: 1.5rem; /* Responsive font size */
+    font-size: 1.5rem;
     font-weight: bold;
   }
   
   .nav {
     display: flex;
-    gap: 0.9375rem; /* 15px */
+    gap: 0.9375rem; 
   }
   
   .btn {
-    padding: 0.625rem 1.25rem; /* 10px 20px */
+    padding: 0.625rem 1.25rem;
     background-color: #fff;
     color: #333;
     border: none;
-    border-radius: 0.3125rem; /* 5px */
+    border-radius: 0.3125rem; 
     cursor: pointer;
     font-weight: 800;
     transition: background-color 0.3s ease;
@@ -57,21 +57,21 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 62.5rem; /* 1000px */
-    height: 37.5rem; /* 600px */
+    width: 62.5rem; 
+    height: 37.5rem; 
     background: #f5f5f5;
-    box-shadow: 0 1.875rem 3.125rem #dbdbdb; /* 30px 50px */
+    box-shadow: 0 1.875rem 3.125rem #dbdbdb; 
     overflow-x: hidden;
   }
   
   .slide .item {
-    width: 12.5rem; /* 200px */
-    height: 18.75rem; /* 300px */
+    width: 12.5rem; 
+    height: 18.75rem; 
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
-    border-radius: 1.25rem; /* 20px */
-    box-shadow: 0 1.875rem 3.125rem #505050; /* 30px 50px */
+    border-radius: 1.25rem; 
+    box-shadow: 0 1.875rem 3.125rem #505050; 
     background-position: 50% 50%;
     background-size: cover;
     display: inline-block;
@@ -112,11 +112,11 @@
     color: #030303;
     transform: translate(0, -50%);
     font-family: system-ui;
-    display: none; /* Hide content by default */
+    display: none; 
   }
   
   .content .name {
-    font-size: 2.5rem; /* 40px */
+    font-size: 2.5rem; 
     text-transform: uppercase;
     font-weight: bold;
     opacity: 0;
@@ -124,14 +124,14 @@
   }
   
   .content .des {
-    margin-top: 0.625rem; /* 10px */
-    margin-bottom: 1.25rem; /* 20px */
+    margin-top: 0.625rem; 
+    margin-bottom: 1.25rem; 
     opacity: 0;
     animation: animate 1s ease-in-out 0.3s 1 forwards;
   }
   
   .content button {
-    padding: 0.625rem 1.25rem; /* 10px 20px */
+    padding: 0.625rem 1.25rem;
     border: none;
     cursor: pointer;
     opacity: 0;
@@ -160,12 +160,12 @@
   }
   
   .button button {
-    width: 2.5rem; /* 40px */
-    height: 2.1875rem; /* 35px */
-    border-radius: 0.5rem; /* 8px */
+    width: 2.5rem; 
+    height: 2.1875rem; 
+    border-radius: 0.5rem; 
     border: none;
     cursor: pointer;
-    margin: 0 0.3125rem; /* 5px */
+    margin: 0 0.3125rem; 
     margin-bottom: 2rem;
     border: 1px solid #000;
     transition: 0.3s;
@@ -178,16 +178,16 @@
   
   /* Footer Styles */
   footer {
-    background-color: #111; /* Black background */
-    color: whitesmoke; /* Light text color */
+    background-color: #111; 
+    color: whitesmoke; 
     width: 100%;
     margin-top: 48rem;
     overflow-x: hidden;
   }
   
   .footerBottom {
-    background-color: #000; /* Pure black background */
-    padding: 1.25rem; /* 20px */
+    background-color: #000;
+    padding: 1.25rem; 
     text-align: center;
   }
   
